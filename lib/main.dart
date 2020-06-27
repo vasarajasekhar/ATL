@@ -60,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 "Heutagogy",
                 style: GoogleFonts.montserrat(
                   textStyle: TextStyle(
-                    fontSize: 50,
+                    fontSize: 40,
                     fontWeight: FontWeight.bold,
                     color: Colors.orange
                   )
@@ -185,7 +185,7 @@ class _MyHomePageState extends State<MyHomePage> {
       Timer(Duration(milliseconds: 1100), () {
         print(assessment);
         Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => MainScreen(data, assessment)));
+            context, MaterialPageRoute(builder: (context) => OnBoardScreen(data, assessment)));
       });
     }
   }
