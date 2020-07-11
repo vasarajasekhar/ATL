@@ -86,24 +86,24 @@ class QuestionWidgetState extends State<StatefulWidget> {
               textAlign: TextAlign.center,
             ),
             Padding(padding: EdgeInsets.only(top: 10)),
-            (question.youtubeVideo != "" && question.youtubeVideo != null)
-                ? //  YoutubePlayer(
-                //     width: 360,
-                //     context: context,
-                //     source: question.youtubeVideo,
-                //     quality: YoutubeQuality.HIGH,
-                //     autoPlay: false,
-                //     showVideoProgressbar: true,
-                //   )
-                Text("Deleted Youtube here")
-                : (question.image != "")
-                    ? CachedNetworkImage(
-                        imageUrl: question.image,
-                        width: 256,
-                        placeholder: (context, data) => CircularProgressIndicator(),
-                        placeholderFadeInDuration: Duration(seconds: 1),
-                      )
-                    : Container(),
+            // (question.youtubeVideo != "" && question.youtubeVideo != null)
+            //     ? //  YoutubePlayer(
+            //     //     width: 360,
+            //     //     context: context,
+            //     //     source: question.youtubeVideo,
+            //     //     quality: YoutubeQuality.HIGH,
+            //     //     autoPlay: false,
+            //     //     showVideoProgressbar: true,
+            //     //   )
+            //     Text("Deleted Youtube here")
+            //     : (question.image != "")
+            //         ? CachedNetworkImage(
+            //             imageUrl: question.image,
+            //             width: 256,
+            //             placeholder: (context, data) => CircularProgressIndicator(),
+            //             placeholderFadeInDuration: Duration(seconds: 1),
+            //           )
+            //         : Container(),
             Padding(
               padding: EdgeInsets.only(top: 10),
             ),

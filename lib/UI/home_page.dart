@@ -62,7 +62,7 @@ class _HomePageState extends State<_HomePage> {
                   splashColor: Color.fromARGB(40, 0, 0, 200),
                   onTap: () {
                     Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => LessonsPage(this.data)));
+                        context, MaterialPageRoute(builder: (context) => LessonsPage()));
                   },
                   child: Column(mainAxisSize: MainAxisSize.max, children: <Widget>[
                     Padding(

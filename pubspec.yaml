@@ -33,6 +33,9 @@ dependencies:
   pie_chart:
   # youtube_player:
   smooth_star_rating:
+  cloud_firestore:
+  provider:
+
 
 
 

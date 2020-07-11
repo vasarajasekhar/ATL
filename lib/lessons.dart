@@ -12,68 +12,105 @@ import 'other_tests/lesson_tests.dart';
 import 'package:heutagogy/UI/quiz_types.dart';
 import 'package:heutagogy/widgets/cards.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class LessonsPage extends StatelessWidget {
-  final String data;
-
-  LessonsPage(this.data);
-
+  
   @override
   Widget build(BuildContext context) {
-    return _LessonsPage(data);
+    return _LessonsPage();
   }
 }
 
 class _LessonsPage extends StatefulWidget {
-  final String data;
-
-  _LessonsPage(this.data);
-
-  @override
-  _LessonsPageState createState() => _LessonsPageState(data);
+    @override
+  _LessonsPageState createState() => _LessonsPageState();
 }
 
 class _LessonsPageState extends State<_LessonsPage> {
-  _LessonsPageState(String data) {
-    var lessons = json.decode(utf8.decode(data.codeUnits));
-    for (var x in lessons) {
-      lessonsData.add(LessonData.fromJSON(x));
-    }
-    print("No of Lessons = ${lessonsData.length}");
+  // _LessonsPageState(String data) {
+  //   var lessons = json.decode(utf8.decode(data.codeUnits));
+  //   for (var x in lessons) {
+  //     lessonsData.add(LessonData.fromJSON(x));
+  //   }
+  //   print("No of Lessons = ${lessonsData.length}");
+  // }
+
+  Future getData() async{
+    final firestoreinstance = await Firestore.instance;
+    Future<DocumentSnapshot> dn = firestoreinstance
+                                  .collection("root")
+                                  .document("ICSE")
+                                  .collection("schools")
+                                  .document("school1")
+                                  .collection("classes")
+                                  .document("class6")
+                                  .collection("sections")
+                                  .document("sectionA")
+                                  .collection("subjects")
+                                  .document("science")
+                                  .collection("chapters")
+                                  .document("chapter1")
+                                  .get();
+    return dn;
+
   }
 
   List<LessonData> lessonsData = [];
-
-  Widget lessonsBuilder(BuildContext context, int index) {
-    return Lesson(
-      title: this.lessonsData[index].title,
-      summary: this.lessonsData[index].introText,
-      func: () {
-        // if (index >= 0 && index <= this.lessonsData.length - 1) {
-        //   Navigator.push(
-        //       context,
-        //       MaterialPageRoute(
-        //           // builder: (context) => LessonDetail(
-        //           //       this.lessonsData[index],
-        //           //       id: index + 1,
-        //           //     )
-        //           builder: (context) {
-        //             if (index == 1) {
-        //                 return MyLesson1Tests(this.lessonsData[index]);
-        //             } else if (index == 2) {
-        //                 return MyLesson2Tests(this.lessonsData[index]);
-        //             } else if (index == 3) {
-        //                 return MyLesson3Tests(this.lessonsData[index]);
-        //             } else {
-        //                 return MyLessonTests(this.lessonsData[index]);
-        //             }
-        //           }
-        //         )
-        //   );
-        // }
-        Navigator.push(context, MaterialPageRoute(builder: (context) => QuizTypes(this.lessonsData[0])));
-      },
-    );
+  // BuildContext context, int index
+  List<Widget> lessonsBuilder() {
+    List<Widget> lessons = [];
+    int len = 1;
+    for(int i=1;i<=len;i++){
+      lessons.add(
+          FutureBuilder(
+            future: getData(),
+            builder: (_,snapshot){
+              if(snapshot.connectionState == ConnectionState.waiting){
+                return Scaffold(
+                  body: Center(
+                    child: CircularProgressIndicator(
+                    backgroundColor: Colors.orange,
+                  ),
+                  ),
+                );
+              }
+              else{
+                return Lesson(
+                  title: "Lesson $i",
+                  summary: snapshot.data["subtitle"]==null?"Data not fetched":snapshot.data["subtitle"],
+                  func: () {
+                    // if (index >= 0 && index <= this.lessonsData.length - 1) {
+                    //   Navigator.push(
+                    //       context,
+                    //       MaterialPageRoute(
+                    //           // builder: (context) => LessonDetail(
+                    //           //       this.lessonsData[index],
+                    //           //       id: index + 1,
+                    //           //     )
+                    //           builder: (context) {
+                    //             if (index == 1) {
+                    //                 return MyLesson1Tests(this.lessonsData[index]);
+                    //             } else if (index == 2) {
+                    //                 return MyLesson2Tests(this.lessonsData[index]);
+                    //             } else if (index == 3) {
+                    //                 return MyLesson3Tests(this.lessonsData[index]);
+                    //             } else {
+                    //                 return MyLessonTests(this.lessonsData[index]);
+                    //             }
+                    //           }
+                    //         )
+                    //   );
+                    // }
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => QuizTypes()));
+                  },
+                );
+              }
+            },
+          ),
+      );
+    }
+    return lessons;
   }
 
   @override
@@ -93,9 +130,14 @@ class _LessonsPageState extends State<_LessonsPage> {
               textStyle: TextStyle(fontSize: 22, fontWeight: FontWeight.w500, color: Colors.black)),
             ) 
       ),
-      body: ListView.builder(
-        itemCount: 1,
-        itemBuilder: lessonsBuilder,
+      // body: ListView.builder(
+      //   itemCount: 1,
+      //   itemBuilder: lessonsBuilder,
+      // ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: lessonsBuilder(),
+        ),
       ),
     );
   }

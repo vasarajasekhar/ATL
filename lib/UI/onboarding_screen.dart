@@ -74,7 +74,7 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
                   alignment: Alignment.centerRight,
                   child: FlatButton(
                     onPressed: () {
-                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainScreen(data,assessment)));
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainScreen()));
                     },
                     child: Text(
                       "Skip",
@@ -232,7 +232,7 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
         color:Colors.white,
         child: GestureDetector(
           onTap: () {
-            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainScreen(data,assessment)));
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainScreen()));
           },
           child: Center(
             child: Padding(

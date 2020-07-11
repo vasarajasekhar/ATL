@@ -33,17 +33,17 @@ class Lesson1TestsState extends State<MyLesson1Tests> {
 
     // for (int z = 0; z < 10; z++) {
       // if (lessonData.test1 != null && z < 1) {
-        mySteps.add(Step(
-          title: Text(''),
-          content: Test1Page(),
-          isActive: (i++) == this.currentStep,
-          state: StepState.indexed,
-        ));
-        mySteps.add(Step(
-        title: Text(''),
-        content: WellDonePage(),
-        isActive: (i++) == this.currentStep,
-        state: StepState.indexed));
+        // mySteps.add(Step(
+        //   title: Text(''),
+        //   content: Test1Page(),
+        //   isActive: (i++) == this.currentStep,
+        //   state: StepState.indexed,
+        // ));
+        // mySteps.add(Step(
+        // title: Text(''),
+        // content: WellDonePage(),
+        // isActive: (i++) == this.currentStep,
+        // state: StepState.indexed));
     
       // }
       // if (lessonData.test2 != null && z < lessonData.test2.length) {
