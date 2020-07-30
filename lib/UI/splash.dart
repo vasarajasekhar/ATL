@@ -118,7 +118,7 @@ class _SplashScreenState extends State<SplashScreen>
                       //   padding: const EdgeInsets.only(top: 10.0),
                       // ),
                       Text(
-                        'Heutagogy',
+                        'selfcheck',
                         style: TextStyle(
                           fontSize: 60 * animation.value,
                           foreground: Paint()..shader = linearGradient,

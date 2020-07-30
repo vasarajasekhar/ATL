@@ -3,9 +3,9 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:heutagogy/models/data_models.dart';
-import 'package:heutagogy/lessons.dart';
-// import 'package:heutagogy/summative_assesment.dart';
+import 'package:selfcheck/models/data_models.dart';
+import 'package:selfcheck/lessons.dart';
+// import 'package:selfcheck/summative_assesment.dart';
 
 class HomePage extends StatelessWidget {
   final String data;
@@ -62,7 +62,7 @@ class _HomePageState extends State<_HomePage> {
                   splashColor: Color.fromARGB(40, 0, 0, 200),
                   onTap: () {
                     Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => LessonsPage(this.data)));
+                        context, MaterialPageRoute(builder: (context) => LessonsPage()));
                   },
                   child: Column(mainAxisSize: MainAxisSize.max, children: <Widget>[
                     Padding(

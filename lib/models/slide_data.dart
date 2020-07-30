@@ -38,7 +38,7 @@ List<SliderTileModel> getSlides(){
   SliderTileModel slider = new SliderTileModel();
 
   slider.setImagePath("assets/images/self_learning.jpg");
-  slider.setTitle("Heutagogy");
+  slider.setTitle("selfcheck");
   slider.setDesc("The self-determined learning procedure nurtures many at an early stage.");
   slides.add(slider);
 

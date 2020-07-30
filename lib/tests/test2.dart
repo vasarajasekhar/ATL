@@ -2,7 +2,7 @@ import 'dart:math';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:heutagogy/models/data_models.dart';
+import 'package:selfcheck/models/data_models.dart';
 
 class Test2Page extends StatefulWidget {
   final Test2Data test2data;

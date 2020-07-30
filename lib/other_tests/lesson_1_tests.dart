@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:heutagogy/models/data_models.dart';
-import 'package:heutagogy/tests/test1.dart';
-import 'package:heutagogy/tests/test2.dart';
-import 'package:heutagogy/tests/test3.dart';
-import 'package:heutagogy/tests/test4.dart';
-import 'package:heutagogy/tests/test5.dart';
-import 'package:heutagogy/tests/test9.dart';
-import 'package:heutagogy/UI/well_done_page.dart';
+import 'package:selfcheck/models/data_models.dart';
+import 'package:selfcheck/tests/test1.dart';
+import 'package:selfcheck/tests/test2.dart';
+import 'package:selfcheck/tests/test3.dart';
+import 'package:selfcheck/tests/test4.dart';
+import 'package:selfcheck/tests/test5.dart';
+import 'package:selfcheck/tests/test9.dart';
+import 'package:selfcheck/UI/well_done_page.dart';
 
 class MyLesson1Tests extends StatefulWidget {
   final LessonData lessonData;
@@ -33,17 +33,17 @@ class Lesson1TestsState extends State<MyLesson1Tests> {
 
     // for (int z = 0; z < 10; z++) {
       // if (lessonData.test1 != null && z < 1) {
-        mySteps.add(Step(
-          title: Text(''),
-          content: Test1Page(),
-          isActive: (i++) == this.currentStep,
-          state: StepState.indexed,
-        ));
-        mySteps.add(Step(
-        title: Text(''),
-        content: WellDonePage(),
-        isActive: (i++) == this.currentStep,
-        state: StepState.indexed));
+        // mySteps.add(Step(
+        //   title: Text(''),
+        //   content: Test1Page(),
+        //   isActive: (i++) == this.currentStep,
+        //   state: StepState.indexed,
+        // ));
+        // mySteps.add(Step(
+        // title: Text(''),
+        // content: WellDonePage(),
+        // isActive: (i++) == this.currentStep,
+        // state: StepState.indexed));
     
       // }
       // if (lessonData.test2 != null && z < lessonData.test2.length) {

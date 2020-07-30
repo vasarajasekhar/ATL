@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:heutagogy/models/data_models.dart';
+import 'package:selfcheck/models/data_models.dart';
 import 'dart:convert';
 
-import 'package:heutagogy/tests/test9.dart';
+import 'package:selfcheck/tests/test9.dart';
 
 class Page1 extends StatelessWidget {
   Page1({Key key}) : super(key: key);

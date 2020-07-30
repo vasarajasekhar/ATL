@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:audioplayers/audio_cache.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:heutagogy/models/data_models.dart';
+import 'package:selfcheck/models/data_models.dart';
 
 class Test4Page extends StatefulWidget {
   final Test4Data test4data;

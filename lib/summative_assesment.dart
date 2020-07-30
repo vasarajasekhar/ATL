@@ -1,20 +1,20 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:heutagogy/assessment_tests/test5.dart';
-import 'package:heutagogy/models/data_models.dart';
-import 'package:heutagogy/assessment_tests/test1.dart';
-import 'package:heutagogy/assessment_tests/test2.dart';
-import 'package:heutagogy/assessment_tests/test3.dart';
-import 'package:heutagogy/assessment_tests/test4.dart';
-import 'package:heutagogy/assessment_tests/test6.dart';
-import 'package:heutagogy/assessment_tests/test7.dart';
-import 'package:heutagogy/assessment_tests/test9.dart';
-import 'package:heutagogy/assessment_tests/transition.dart';
+import 'package:selfcheck/assessment_tests/test5.dart';
+import 'package:selfcheck/models/data_models.dart';
+import 'package:selfcheck/assessment_tests/test1.dart';
+import 'package:selfcheck/assessment_tests/test2.dart';
+import 'package:selfcheck/assessment_tests/test3.dart';
+import 'package:selfcheck/assessment_tests/test4.dart';
+import 'package:selfcheck/assessment_tests/test6.dart';
+import 'package:selfcheck/assessment_tests/test7.dart';
+import 'package:selfcheck/assessment_tests/test9.dart';
+import 'package:selfcheck/assessment_tests/transition.dart';
 import 'dart:math';
 
-import 'package:heutagogy/UI/my_stepper.dart';
-import 'package:heutagogy/UI/well_done_page.dart';
+import 'package:selfcheck/UI/my_stepper.dart';
+import 'package:selfcheck/UI/well_done_page.dart';
 
 class SummativeTests extends StatefulWidget {
   final LessonData lessonData;

@@ -4,7 +4,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:heutagogy/models/data_models.dart';
+import 'package:selfcheck/models/data_models.dart';
 
 //
 //import 'button_theme.dart';

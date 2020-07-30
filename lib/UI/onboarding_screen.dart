@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:heutagogy/UI/home_page.dart';
-import 'package:heutagogy/UI/main_page.dart';
-import 'package:heutagogy/widgets/slider_tile.dart';
-import 'package:heutagogy/models/slide_data.dart';
+import 'package:selfcheck/UI/home_page.dart';
+import 'package:selfcheck/UI/main_page.dart';
+import 'package:selfcheck/widgets/slider_tile.dart';
+import 'package:selfcheck/models/slide_data.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -74,7 +74,7 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
                   alignment: Alignment.centerRight,
                   child: FlatButton(
                     onPressed: () {
-                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainScreen(data,assessment)));
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainScreen()));
                     },
                     child: Text(
                       "Skip",
@@ -114,7 +114,7 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
                             SizedBox(height:20),
                             Center(
                               child: Text(
-                              "HEUTAGOGY",
+                              "selfcheck",
                               style: GoogleFonts.montserrat(
                                 textStyle: TextStyle(
                                   color: Colors.white,
@@ -127,7 +127,7 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
                             SizedBox(height: 5),
                             Center(
                               child: Text(
-                              "Heutagogy helps many through self-determined learning.",
+                              "selfcheck helps many through self-determined learning.",
                               style: GoogleFonts.montserrat(
                                 textStyle: TextStyle(
                                   color: Colors.white,
@@ -232,7 +232,7 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
         color:Colors.white,
         child: GestureDetector(
           onTap: () {
-            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainScreen(data,assessment)));
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainScreen()));
           },
           child: Center(
             child: Padding(

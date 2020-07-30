@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:heutagogy/UI/home_page.dart';
-import 'package:heutagogy/main.dart';
-import 'package:heutagogy/models/result.dart';
+import 'package:selfcheck/UI/home_page.dart';
+import 'package:selfcheck/UI/main_page.dart';
+import 'package:selfcheck/main.dart';
+import 'package:selfcheck/models/result.dart';
 import 'package:pie_chart/pie_chart.dart';
-import 'package:heutagogy/widgets/cards.dart';
+import 'package:selfcheck/widgets/cards.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ScorePage extends StatefulWidget {
@@ -94,14 +95,14 @@ class _ScorePageState extends State<ScorePage> {
             child: Text("Retake Test",style: TextStyle(color: Colors.white),),
             color: Colors.red,
           onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>MyHomePage()));
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>MainScreen()));
           }),
           Padding(padding: EdgeInsets.all(5)),
           RaisedButton(
             child: Text("Take Next Test",style: TextStyle(color: Colors.white),),
             color: Colors.blueAccent,
           onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>MyHomePage()));
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>MainScreen()));
           }),
           Padding(padding: EdgeInsets.all(20)),
           Text("Score Analysis", style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),

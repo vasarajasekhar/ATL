@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'dart:math';
 
-import 'package:heutagogy/models/data_models.dart';
+import 'package:selfcheck/models/data_models.dart';
 
 class MyNumber<T, S> {
   T first;

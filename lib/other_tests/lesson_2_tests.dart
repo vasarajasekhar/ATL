@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:heutagogy/models/data_models.dart';
-import 'package:heutagogy/tests/test1.dart';
-import 'package:heutagogy/tests/test2.dart';
-import 'package:heutagogy/tests/test3.dart';
-import 'package:heutagogy/tests/test4.dart';
-import 'package:heutagogy/tests/test5.dart';
-import 'package:heutagogy/tests/test7.dart';
-import 'package:heutagogy/UI/well_done_page.dart';
+import 'package:selfcheck/models/data_models.dart';
+import 'package:selfcheck/tests/test1.dart';
+import 'package:selfcheck/tests/test2.dart';
+import 'package:selfcheck/tests/test3.dart';
+import 'package:selfcheck/tests/test4.dart';
+import 'package:selfcheck/tests/test5.dart';
+import 'package:selfcheck/tests/test7.dart';
+import 'package:selfcheck/UI/well_done_page.dart';
 
 class MyLesson2Tests extends StatefulWidget {
   final LessonData lessonData;
@@ -24,89 +24,89 @@ class Lesson1TestsState extends State<MyLesson2Tests> {
   int maxLength;
 
   Lesson1TestsState(LessonData lessonData) {
-    this.lessonData = lessonData;
-    this.mySteps = _buildSteps();
+    // this.lessonData = lessonData;
+    // this.mySteps = _buildSteps();
   }
 
-  _buildSteps() {
-    List<Step> mySteps = [];
-    int i = 0;
-    for (int z = 0; z < 10; z++) {
-      if (lessonData.test1 != null && z < lessonData.test1.length) {
-        mySteps.add(Step(
-          title: Text(''),
-          content: Test1Page(),
-          isActive: (i++) == this.currentStep,
-          state: StepState.indexed,
-        ));
-      }
-      // if (lessonData.test2 != null && z < lessonData.test2.length) {
-      //   mySteps.add(Step(
-      //     title: Text(''),
-      //     content: Test2Page(
-      //       lessonData.test2[z],
-      //       key: ObjectKey(lessonData.test2[z]),
-      //     ),
-      //     isActive: (i++) == this.currentStep,
-      //     state: StepState.indexed,
-      //   ));
-      // }
-      // if (lessonData.test3 != null && z < lessonData.test3.length) {
-      //   mySteps.add(Step(
-      //     title: Text(''),
-      //     content: Test3Page(
-      //       lessonData.test3[z],
-      //       key: UniqueKey(),
-      //     ),
-      //     isActive: (i++) == this.currentStep,
-      //     state: StepState.indexed,
-      //   ));
-      // }
-      // if (lessonData.test4 != null && z < lessonData.test4.length) {
-      //   mySteps.add(Step(
-      //     title: Text(''),
-      //     content: Test4Page(
-      //       lessonData.test4[z],
-      //       key: UniqueKey(),
-      //     ),
-      //     isActive: (i++) == this.currentStep,
-      //     state: StepState.indexed,
-      //   ));
-      // }
-      // if (lessonData.test6 != null && z < lessonData.test6.length) {
-      //   mySteps.add(Step(
-      //     title: Text(''),
-      //     content: Test5Page(lessonData.test6[z]),
-      //     isActive: (i++) == this.currentStep,
-      //     state: StepState.indexed,
-      //   ));
-      // }
-    }
+  // _buildSteps() {
+  //   List<Step> mySteps = [];
+  //   int i = 0;
+  //   // for (int z = 0; z < 10; z++) {
+  //   //   if (lessonData.test1 != null && z < lessonData.test1.length) {
+  //   //     mySteps.add(Step(
+  //   //       title: Text(''),
+  //   //       content: Test1Page(),
+  //   //       isActive: (i++) == this.currentStep,
+  //   //       state: StepState.indexed,
+  //   //     ));
+  //   //   }
+  //     // if (lessonData.test2 != null && z < lessonData.test2.length) {
+  //     //   mySteps.add(Step(
+  //     //     title: Text(''),
+  //     //     content: Test2Page(
+  //     //       lessonData.test2[z],
+  //     //       key: ObjectKey(lessonData.test2[z]),
+  //     //     ),
+  //     //     isActive: (i++) == this.currentStep,
+  //     //     state: StepState.indexed,
+  //     //   ));
+  //     // }
+  //     // if (lessonData.test3 != null && z < lessonData.test3.length) {
+  //     //   mySteps.add(Step(
+  //     //     title: Text(''),
+  //     //     content: Test3Page(
+  //     //       lessonData.test3[z],
+  //     //       key: UniqueKey(),
+  //     //     ),
+  //     //     isActive: (i++) == this.currentStep,
+  //     //     state: StepState.indexed,
+  //     //   ));
+  //     // }
+  //     // if (lessonData.test4 != null && z < lessonData.test4.length) {
+  //     //   mySteps.add(Step(
+  //     //     title: Text(''),
+  //     //     content: Test4Page(
+  //     //       lessonData.test4[z],
+  //     //       key: UniqueKey(),
+  //     //     ),
+  //     //     isActive: (i++) == this.currentStep,
+  //     //     state: StepState.indexed,
+  //     //   ));
+  //     // }
+  //     // if (lessonData.test6 != null && z < lessonData.test6.length) {
+  //     //   mySteps.add(Step(
+  //     //     title: Text(''),
+  //     //     content: Test5Page(lessonData.test6[z]),
+  //     //     isActive: (i++) == this.currentStep,
+  //     //     state: StepState.indexed,
+  //     //   ));
+  //     // }
+  //   }
 
-    mySteps.add(Step(
-      title: Text(''),
-      content: Test7Page(9, 9, [11, 34, 66, 23, 12, 54, 53, 43, 41, 49, 80, 52], key: UniqueKey()),
-      isActive: (i++) == this.currentStep,
-      state: StepState.indexed,
-    ));
-    mySteps.add(Step(
-        title: Text(''),
-        content: WellDonePage(),
-        isActive: (i++) == this.currentStep,
-        state: StepState.indexed));
-    this.maxLength = i;
-    return mySteps;
-  }
+  //   // mySteps.add(Step(
+  //   //   title: Text(''),
+  //   //   content: Test7Page(9, 9, [11, 34, 66, 23, 12, 54, 53, 43, 41, 49, 80, 52], key: UniqueKey()),
+  //   //   isActive: (i++) == this.currentStep,
+  //   //   state: StepState.indexed,
+  //   // ));
+  //   // mySteps.add(Step(
+  //   //     title: Text(''),
+  //   //     content: WellDonePage(),
+  //   //     isActive: (i++) == this.currentStep,
+  //   //     state: StepState.indexed));
+  //   // this.maxLength = i;
+  //   // return mySteps;
+  // }
 
   LessonData lessonData;
   int currentStep = 0;
 
-  onStepTapped(step) {
-    setState(() {
-      currentStep = step;
-    });
-    print("On Step Tapped: " + step.toString());
-  }
+  // onStepTapped(step) {
+  //   // setState(() {
+  //   //   currentStep = step;
+  //   // });
+  //   print("On Step Tapped: " + step.toString());
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -128,30 +128,31 @@ class Lesson1TestsState extends State<MyLesson2Tests> {
           style: TextStyle(color: Colors.black),
         ),
       ),
-      body: Theme(
-        data: ThemeData(
-          canvasColor: Colors.white,
-        ),
-        child: Stepper(
-          type: StepperType.horizontal,
-          currentStep: this.currentStep,
-          onStepTapped: onStepTapped,
-          steps: this.mySteps,
-          controlsBuilder: (BuildContext context,
-              {VoidCallback onStepContinue, VoidCallback onStepCancel}) {
-            return Row(
-              children: <Widget>[
-                Container(
-                  child: null,
-                ),
-                Container(
-                  child: null,
-                ),
-              ],
-            );
-          },
-        ),
-      ),
+      // body: Theme(
+      //   data: ThemeData(
+      //     canvasColor: Colors.white,
+      //   ),
+      //   child: Stepper(
+      //     type: StepperType.horizontal,
+      //     currentStep: 0,
+      //     onStepTapped: onStepTapped,
+      //     steps: 9,
+      //     controlsBuilder: (BuildContext context,
+      //         {VoidCallback onStepContinue, VoidCallback onStepCancel}) {
+      //       return Row(
+      //         children: <Widget>[
+      //           Container(
+      //             child: null,
+      //           ),
+      //           Container(
+      //             child: null,
+      //           ),
+      //         ],
+      //       );
+      //     },
+      //   ),
+      // ),
+      body: Container(child: Text("")),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: (showFab
           ? Stack(
@@ -165,13 +166,13 @@ class Lesson1TestsState extends State<MyLesson2Tests> {
                       splashColor: Colors.lightBlueAccent,
                       heroTag: 'NextStep',
                       onPressed: () {
-                        if (currentStep < maxLength - 1) {
-                          setState(() {
-                            currentStep = currentStep + 1;
-                          });
-                        } else {
-                          Navigator.pop(context);
-                        }
+                        // if (currentStep < maxLength - 1) {
+                        //   setState(() {
+                        //     currentStep = currentStep + 1;
+                        //   });
+                        // } else {
+                        //   Navigator.pop(context);
+                        // }
                       },
                       label: Text(
                         "Next",
@@ -198,9 +199,9 @@ class Lesson1TestsState extends State<MyLesson2Tests> {
                       heroTag: 'PreviousStep',
                       onPressed: () {
                         if (currentStep > 0) {
-                          setState(() {
-                            currentStep = currentStep - 1;
-                          });
+                          // setState(() {
+                          //   currentStep = currentStep - 1;
+                          // });
                         } else {
                           Navigator.pop(context);
                         }

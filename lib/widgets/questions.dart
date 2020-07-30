@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:heutagogy/models/data_models.dart';
-import 'package:heutagogy/widgets/cards.dart';
+import 'package:selfcheck/models/data_models.dart';
+import 'package:selfcheck/widgets/cards.dart';
 
 class Question extends StatelessWidget {
   final int qno;

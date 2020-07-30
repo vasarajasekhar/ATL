@@ -2,7 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:heutagogy/models/data_models.dart';
+import 'package:selfcheck/models/data_models.dart';
 // import 'package:youtube_player/youtube_player.dart';
 
 import 'animated_button.dart';
@@ -86,24 +86,24 @@ class QuestionWidgetState extends State<StatefulWidget> {
               textAlign: TextAlign.center,
             ),
             Padding(padding: EdgeInsets.only(top: 10)),
-            (question.youtubeVideo != "" && question.youtubeVideo != null)
-                ? //  YoutubePlayer(
-                //     width: 360,
-                //     context: context,
-                //     source: question.youtubeVideo,
-                //     quality: YoutubeQuality.HIGH,
-                //     autoPlay: false,
-                //     showVideoProgressbar: true,
-                //   )
-                Text("Deleted Youtube here")
-                : (question.image != "")
-                    ? CachedNetworkImage(
-                        imageUrl: question.image,
-                        width: 256,
-                        placeholder: (context, data) => CircularProgressIndicator(),
-                        placeholderFadeInDuration: Duration(seconds: 1),
-                      )
-                    : Container(),
+            // (question.youtubeVideo != "" && question.youtubeVideo != null)
+            //     ? //  YoutubePlayer(
+            //     //     width: 360,
+            //     //     context: context,
+            //     //     source: question.youtubeVideo,
+            //     //     quality: YoutubeQuality.HIGH,
+            //     //     autoPlay: false,
+            //     //     showVideoProgressbar: true,
+            //     //   )
+            //     Text("Deleted Youtube here")
+            //     : (question.image != "")
+            //         ? CachedNetworkImage(
+            //             imageUrl: question.image,
+            //             width: 256,
+            //             placeholder: (context, data) => CircularProgressIndicator(),
+            //             placeholderFadeInDuration: Duration(seconds: 1),
+            //           )
+            //         : Container(),
             Padding(
               padding: EdgeInsets.only(top: 10),
             ),
